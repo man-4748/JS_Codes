@@ -42,3 +42,17 @@ let a = 10, b = 5, c = -8;
 console.log('a is ', isEvenOrOdd(a));
 console.log('b is ', isEvenOrOdd(b));
 console.log('c is ', isEvenOrOdd(c));
+
+
+// // check which nos are odd and even b/w 1 to 50
+// function isEvenOrOdd(n){
+//     if(n%2==0) return "Even";
+//     else return "Odd";
+// }
+
+// for(let i=1;i<=50;i++){
+//     console.log(i,"is ",isEvenOrOdd(i));
+// }
+
+
+
