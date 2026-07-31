@@ -1,0 +1,18 @@
+// Coercion
+//  Coercion is basically implicit typecasting/type conversion done by the language internally.
+
+// Abstract operations:
+// ToNumber
+// Application - subtraction operator first converts left operand and right operand to ToNumber and then evaluate it
+console.log(2-null); // 2-null --> 2-0 -->2
+console.log(2-undefined); // 2 - undefined --> 2-NaN --> NaN
+console.log(10 - true);   // true --> 1 : 10-1=9
+
+console.log(2-'2');   // 2 - '2' --> 2 - 2 = 0
+console.log(10-'10a'); // cant convert '10a' to a valid no --> NaN
+
+console.log(1-'0xa');
+/**
+ * 0xa --> represents hexa decimal no system 0xa == 10
+ * hence 0xa can be converted into a valid no --> hence it becomes 1 - 10 = -9
+ */
