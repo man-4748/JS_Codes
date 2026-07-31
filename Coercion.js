@@ -79,15 +79,24 @@ let obj4 = {
     }
 }
 
-console.log(1 - obj4);
+// console.log(1 - obj4);
 //TypeError : obj4.toString() --> returns an object
 
+// Addition Operator:
 
+let Obj = {};
+console.log(Obj.toString());//[object Object]
 
+console.log("10" + Obj);
+/**
+ * ToPrimitive("10") ---> "10"
+ * ToPrimitive(Obj) ---> (default hint: number)-->toValue --> returns same Obj---> toString--->  [object Object]  which is a string, return this
+ * "10" + "[object Object]" ---> "10[object Object]"
+ */
 
-
-
-
+console.log(10 + Obj);
+// 10 + "[object Object]"
+// convert both into string since one operand is a string and concatenate them
 
 
 
