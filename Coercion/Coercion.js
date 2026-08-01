@@ -11,6 +11,10 @@ console.log(10 - true);   // true --> 1 : 10-1=9
 console.log(2-'2');   // 2 - '2' --> 2 - 2 = 0
 console.log(10-'10a'); // cant convert '10a' to a valid no --> NaN
 
+// ToNumber
+console.log(0-"010");
+console.log(0-"O10");
+
 console.log(1-'0xa');
 /**
  * 0xa --> represents hexa decimal no system 0xa == 10
