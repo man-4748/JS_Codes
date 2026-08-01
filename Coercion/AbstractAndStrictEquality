@@ -1,0 +1,13 @@
+// Abstract equality
+// it also does check type in first step 
+console.log(null == undefined); //true
+
+// Strict equality
+console.log(null === undefined); //false
+
+// x == y:
+console.log(false == "0");
+/**
+ * false --> ToNumber --> 0 : compare again : x == y {x->0, y->"0"}
+ * "0" --> ToNumber --> 0 : compare again x == y (0==0) which is true
+ */
