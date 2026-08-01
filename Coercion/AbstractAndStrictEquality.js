@@ -58,6 +58,21 @@ console.log(obj1 === obj1);     // true
 
 console.log({a:10}==={a:10});  // these both objects will be created at different locations in the memory
 
+let smartObj = {
+  [Symbol.toPrimitive](hint) {
+    if (hint === "number") {
+      return 42;
+    }
+    if (hint === "string") {
+      return "hello";
+    }
+    return "default-value"; // hint is "default" (e.g., binary + operator)
+  }
+};
 
+console.log(100 - smartObj); // hint is "number" -> 100 - 42 = 58
+console.log(`${smartObj}!`); // hint is "string" -> "hello!"
+console.log(100 + smartObj); // hint is "default" -> "100default-value"
+console.log(smartObj == 42); // hint is "default" -> "default-value" == 42 -> NaN == 42 -> false
 
 
