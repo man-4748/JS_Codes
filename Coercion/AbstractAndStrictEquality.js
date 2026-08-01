@@ -1,6 +1,9 @@
 // Abstract equality
 // it also does check type in first step 
 console.log(null == undefined); //true
+console.log(null == 0);         // false
+console.log(null == false);     // false
+console.log(null == "");        // false
 
 // Strict equality
 console.log(null === undefined); //false
