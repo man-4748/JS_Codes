@@ -99,6 +99,16 @@ console.log(10 + Obj);
 // convert both into string since one operand is a string and concatenate them
 
 
+// ToBoolean
+let a = undefined;
+console.log(!a);
+// undefined, Null, 0,-0, NaN --> falsy values
+if(a){
+    console.log("It is a truthy value");
+}else{
+    console.log("It is a falsy value");
+}
+
 
 
 
