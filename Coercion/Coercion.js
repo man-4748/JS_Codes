@@ -122,4 +122,8 @@ console.log("My balance is "+bjo); //My balance is [object Object]
 console.log(`My balance is ${bjo}`);//My balance is [object Object]
 
 
-
+console.log(1<2<3);
+//{1<2}--> True --> {True<3} -->{1<3}--> True
+console.log(1>2>3);
+console.log(3>2>1); //false
+//{3>2}-->true : {true>1}-->{1>1}-->false
