@@ -113,7 +113,13 @@ if(a){
     console.log("It is a falsy value");
 }
 
-
+//Templated String
+let num = 12;
+console.log("My balance is "+num);
+console.log(`My balance is ${num}`);
+let bjo = {x:12};
+console.log("My balance is "+bjo); //My balance is [object Object]
+console.log(`My balance is ${bjo}`);//My balance is [object Object]
 
 
 
