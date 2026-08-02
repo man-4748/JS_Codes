@@ -92,3 +92,15 @@ function checkpalindromeStr(n){
 
 console.log(checkpalindromeStr(14541));
 
+// Write a function to check sign of a number properly
+function signOfNumber(n){
+    if(typeof(n)!="number") return NaN;
+    else{
+        if(Object.is(n,0)) return +1;
+        else if(Object.is(n,-0)) return -1;
+        else if(n>0) return +1;
+        else return -1;
+    }
+}
+console.log(signOfNumber(-0));
+console.log(signOfNumber(undefined));
