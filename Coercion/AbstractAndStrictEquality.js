@@ -75,4 +75,8 @@ console.log(`${smartObj}!`); // hint is "string" -> "hello!"
 console.log(100 + smartObj); // hint is "default" -> "100default-value"
 console.log(smartObj == 42); // hint is "default" -> "default-value" == 42 -> NaN == 42 -> false
 
+let x = -0;
+console.log(x === 0);
 
+console.log(Object.is(x,0));
+console.log(Object.is(x,-0));
