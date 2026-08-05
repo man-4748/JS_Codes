@@ -15,7 +15,7 @@ fun();
 // undefined       -----> LEXICAL SCOPING
 // 10
 {
-    var v = 8; // becomes global due to var
+    var v = 8;  // becomes global due to var --> because var whenever initialised outside of function gives it global scope
 }
 console.log(v);
 //*** var --> if written outside a function , gives the variable global scope***
