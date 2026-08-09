@@ -18,9 +18,11 @@ function gun(fn){
     console.log("Inside gun");
     fn();
     console.log("Leaving gun");
+   
 }
 gun(function (){// this is a function expression ---> whenever we don't start writing the code with Keyword function.
+     //console.trace();// stack trace
     console.log("New function passed.")
 });
 
-gun(fun);
+//gun(fun);
