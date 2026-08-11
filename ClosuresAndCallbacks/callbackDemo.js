@@ -23,7 +23,7 @@ let x =arr.map(function process(v,i){
     // map : for all the elements in the given array, it passes as an argument to the callback
     console.log(v,i);
 })
-
+//map() always creates a new array. Whatever the callback function returns becomes the corresponding element in that new array.
 console.log(x);// ---> undefined array because we are not returning anything inside callback function
 let y = arr.map(function parse(v,i){
     console.log(i,v*v);
