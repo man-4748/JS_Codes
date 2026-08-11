@@ -16,10 +16,16 @@ fun(10, function log(){
 // fun(10, function (){
 //     console.log("anonymous logger"); 
 // })
+
 function gun(){
     console.log("inside gun");
 }
-fun(5, gun);
+
+let g = function (){
+    console.log("inside g");
+}
+// fun(10,g);
+// fun(5, gun);
 
 
 
