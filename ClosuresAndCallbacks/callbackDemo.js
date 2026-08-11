@@ -26,7 +26,9 @@ let g = function (){
 }
 // fun(10,g);
 // fun(5, gun);
-
+/*
+NOTE: Don't do anything like fun(10,gun()) because then you will be calling gun() first and since gun isn't returning anything , fun(2,undefined) will be called
+*/
 
 
 
