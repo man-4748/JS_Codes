@@ -13,6 +13,16 @@ fun(10, function log(){
     console.log("custom logger"); 
 })
 
+// fun(10, function (){
+//     console.log("anonymous logger"); 
+// })
+function gun(){
+    console.log("inside gun");
+}
+fun(5, gun);
+
+
+
 
 
 // applications of callback:
