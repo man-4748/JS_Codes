@@ -33,4 +33,16 @@ Assignments completed
 This outputjustifies thaat the function fun is executed after ToDo is over --> since [
 Starting ToDo] and [Ending ToDo] are already printed , how does fun havw access to"task" variable.
 */
+//Example3:
+function a(name){
+    return function b(){
+        console.log(name);
+    }
+}
 
+let x = a("Sanket");
+console.log(x);
+x();
+//Calling x() invokes function b.
+//Function b looks for the name variable in its own scope, fails to find it;
+// So it  looks up into its closure scope, where it retrieves "Sanket" and prints it to the console.
