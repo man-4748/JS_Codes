@@ -46,3 +46,16 @@ x();
 //Calling x() invokes function b.
 //Function b looks for the name variable in its own scope, fails to find it;
 // So it  looks up into its closure scope, where it retrieves "Sanket" and prints it to the console.
+
+// Predict output:
+function fun(task1 , task2){
+    task1 = "paras"
+    setTimeout(function gun(){
+        console.log("completed" , task1);
+
+    }, 2000)
+    task1 = task2 ;
+    task2 = "assign";
+}
+
+fun("12", "34");
