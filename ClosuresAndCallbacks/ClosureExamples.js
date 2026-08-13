@@ -59,3 +59,37 @@ function fun(task1 , task2){
 }
 
 fun("12", "34");
+
+
+
+
+
+const add = (function () {
+    let counter = 0;
+    return function () {
+        counter += 1;
+        console.log(counter);
+        return counter;
+    }
+    
+})();
+add();
+add();
+add();
+/*
+1
+2      --> why is output 1 2 3
+3
+The IIFE Execution (Runs only ONCE at initialization):
+
+As soon as JS reads this code, the outer anonymous function executes immediately.
+It initializes a local variable let counter = 0.
+It returns the inner function and assigns it to the variable add.
+The outer function finishes executing and leaves the stack, but counter is not garbage collected because the returned inner function forms a closure around it.
+
+add is not equal to the outer function; add is equal to the inner function:
+
+counter is not reset to 0 on each call to add() because counter = 0 was inside the outer IIFE, 
+which ran only once during assignment. 
+Each time you invoke add(), you are only running the inner function,
+which references and mutates that persistent, private counter variable.
