@@ -9,3 +9,14 @@ console.log("End");
 
 //Single-Threaded & Synchronous: JavaScript executes code on a single thread with a single Call Stack. 
 //It processes instructions one line at a time from top to bottom.
+/**
+
+NOTE: This sync code execution only works for operations known to javascript
+*/
+
+console.log("Start");
+setTimeout(function exec() {
+    console.log("Set task done");
+},7000);
+console.log("End");
+// Thats why end is printed before set task done ---> setTimeout is not known to js
